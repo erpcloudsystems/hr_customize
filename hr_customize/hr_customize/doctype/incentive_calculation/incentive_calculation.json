@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ICE-{YY}-{#####}",
+ "creation": "2023-07-19 00:22:56.978226",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "filters_tab",
+  "month",
+  "posting_date",
+  "jnbh",
+  "first_month",
+  "jghf",
+  "last_month",
+  "mnbvb",
+  "company",
+  "njh",
+  "cost_center",
+  "column_break_znfu2",
+  "branch",
+  "column_break_qrnkl",
+  "department",
+  "column_break_zrj8a",
+  "designation",
+  "employees_tab",
+  "rf",
+  "employees",
+  "column_break_mesbs",
+  "total_amount",
+  "accounting_tab",
+  "mode_of_payment",
+  "section_break_thegh",
+  "form_account",
+  "column_break_8lds7",
+  "to_account",
+  "section_break_qi74u",
+  "receivable",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "Month",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jnbh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_month",
+   "fieldtype": "Date",
+   "label": "From Month"
+  },
+  {
+   "fieldname": "jghf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_month",
+   "fieldtype": "Date",
+   "label": "To Month"
+  },
+  {
+   "fieldname": "mnbvb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "njh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_znfu2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_qrnkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "filters_tab",
+   "fieldtype": "Tab Break",
+   "label": "Filters"
+  },
+  {
+   "fieldname": "employees_tab",
+   "fieldtype": "Tab Break",
+   "label": "Employees"
+  },
+  {
+   "fieldname": "rf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Incentive Employee"
+  },
+  {
+   "fieldname": "accounting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mesbs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_thegh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "form_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8lds7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_account",
+   "fieldtype": "Link",
+   "label": "Payable",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Incentive Calculation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zrj8a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "section_break_qi74u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "receivable",
+   "fieldtype": "Link",
+   "label": "Payment  Account",
+   "options": "Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-05 22:42:44.681753",
+ "modified_by": "Administrator",
+ "module": "HR Customize",
+ "name": "Incentive Calculation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
