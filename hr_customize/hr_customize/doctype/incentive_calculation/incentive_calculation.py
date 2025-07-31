@@ -53,7 +53,17 @@ class IncentiveCalculation(Document):
         for r  in juo : 
             frappe.get_doc("Journal Entry",r).cancel()
             
-        frappe.msgprint(_("This has been cancelled") + "{}".format(juo))
+        # frappe.msgprint(_("This has been cancelled") + "{}".format(juo))
+
+        frappe.db.sql("""
+            UPDATE `tabGL Entry`
+            SET 
+                against_voucher_type = NULL,
+                against_voucher = NULL
+            WHERE against_voucher = %s
+        """, (self.name,))
+
+        frappe.db.commit()
         
     def get_emp_list(self, filters):
         cond = ""
