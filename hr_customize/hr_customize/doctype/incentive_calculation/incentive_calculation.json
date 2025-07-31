@@ -30,15 +30,21 @@
   "employees",
   "column_break_mesbs",
   "total_amount",
+  "column_break_fc6vq",
+  "total_tax",
+  "column_break_wz46p",
+  "total_net_amount",
   "accounting_tab",
   "mode_of_payment",
   "section_break_thegh",
-  "form_account",
+  "expense_account",
   "column_break_8lds7",
-  "to_account",
+  "payable",
+  "tax",
   "section_break_qi74u",
   "receivable",
-  "amended_from"
+  "amended_from",
+  "bank_entry"
  ],
  "fields": [
   {
@@ -151,22 +157,8 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "form_account",
-   "fieldtype": "Link",
-   "label": "Expense Account",
-   "options": "Account",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_8lds7",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "to_account",
-   "fieldtype": "Link",
-   "label": "Payable",
-   "options": "Account",
-   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -210,13 +202,62 @@
    "fieldname": "receivable",
    "fieldtype": "Link",
    "label": "Payment  Account",
-   "options": "Account"
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payable",
+   "fieldtype": "Link",
+   "label": "Payable",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Link",
+   "label": "Tax",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fc6vq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_tax",
+   "fieldtype": "Float",
+   "label": "Total Tax",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wz46p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_net_amount",
+   "fieldtype": "Float",
+   "label": "Total Net Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_entry",
+   "fieldtype": "Data",
+   "label": "bank entry",
+   "options": "Journal Entry",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-05 22:42:44.681753",
+ "modified": "2025-07-09 10:58:12.918600",
  "modified_by": "Administrator",
  "module": "HR Customize",
  "name": "Incentive Calculation",
